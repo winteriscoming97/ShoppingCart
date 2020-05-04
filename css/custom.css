@@ -1,0 +1,20 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+.quantity {
+  white-space: nowrap;
+  padding: 0;
+}
+.quantity > input {
+  margin-left: 5px;
+}
+
+.cancel {
+  position: relative;
+  right: 60px;
+}
+
+.container {
+  max-width: 1140px;
+}
