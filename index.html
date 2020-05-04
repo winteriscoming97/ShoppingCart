@@ -16,50 +16,59 @@
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
-    <table class="container mt-5">
+    <table class="container mt-4 mx-auto">
       <tr>
         <th><h1>Shopping Cart</h1></th>
       </tr>
       <tbody class="container">
         <tr class="row">
-          <td class="item col-4">Salmon</td>
-          <td class="price col-2">$60.00</td>
+          <td class="item col-2">Salmon</td>
+          <td class="price col-2 mx-auto">$60.00</td>
           <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="1"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
 
         <tr class="row">
-          <td class="item col-4">Tuna</td>
-          <td class="price col-2">$50.00</td>
+          <td class="item col-2">Tuna</td>
+          <td class="price col-2 mx-auto">$50.00</td>
           <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="3"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
 
         <tr class="row">
-          <td class="item col-4">Carp</td>
-          <td class="price col-2">$40.00</td>
+          <td class="item col-2">Carp</td>
+          <td class="price col-2 mx-auto">$40.00</td>
           <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="2"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
 
         <tr class="row">
-          <td class="item col-4">Pork</td>
-          <td class="price col-2">$50.00</td>
+          <td class="item col-2">Pork</td>
+          <td class="price col-2 mx-auto">$50.00</td>
           <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="2"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
 
         <tr class="row">
-          <td class="item col-4">Beef</td>
-          <td class="price col-2">$40.00</td>
+          <td class="item col-2">Beef</td>
+          <td class="price col-2 mx-auto">$40.00</td>
           <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="4"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
+        <!-- Rows insert here  -->
+        
+        <tr class="row">
+          <td class="col-3"><input type="text" name="item"/></td>
+          <td class="col-3 ml-5 mr-2"><input type="text" name="price"/></td>
+          <td class="col-1 ml-4"><button class="btn btn-sm btn-secondary create">Create</button></td>
+        </tr>
+
+
       </tbody>
     </table>
   </body>
