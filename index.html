@@ -11,7 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/application.js"></script>
 
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
     <link href="css/custom.css" rel="stylesheet">
   </head>
@@ -24,7 +26,7 @@
         <tr class="row">
           <td class="item col-2">Salmon</td>
           <td class="price col-2 mx-auto">$60.00</td>
-          <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="1"/></td>
+          <td class="quantity col-3"><b>QTY</b><input type="number" name="quantity" value="1"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
@@ -32,7 +34,7 @@
         <tr class="row">
           <td class="item col-2">Tuna</td>
           <td class="price col-2 mx-auto">$50.00</td>
-          <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="3"/></td>
+          <td class="quantity col-3"><b>QTY</b><input type="number" name="quantity" value="3"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
@@ -40,7 +42,7 @@
         <tr class="row">
           <td class="item col-2">Carp</td>
           <td class="price col-2 mx-auto">$40.00</td>
-          <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="2"/></td>
+          <td class="quantity col-3"><b>QTY</b><input type="number" name="quantity" value="2"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
@@ -48,7 +50,7 @@
         <tr class="row">
           <td class="item col-2">Pork</td>
           <td class="price col-2 mx-auto">$50.00</td>
-          <td class="quantity col-3"><b>QTY</b><input type="text" name="quantity" value="2"/></td>
+          <td class="quantity col-3"><b>QTY</b><input type="number" name="quantity" value="2"/></td>
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
@@ -60,14 +62,23 @@
           <td class="col-1"><button class="btn btn-secondary btn-sm cancel">Cancel</button></td>
           <td class="item-total col-1">$0.00</td>
         </tr>
-        <!-- Rows insert here  -->
+        <!--  Rows insert here  -->
 
+        <!--  Row creator  -->
         <tr class="row new-item">
-          <td class="col-3 item"><input type="text" name="item" value=""></td>
-          <td class="col-3 ml-5 mr-2 price"><input type="text" name="price" value=""/></td>
+          <td class="col-3 item"><input type="text" name="item" value="" required/></td>
+          <td class="col-3 ml-5 mr-2 price"><input type="number" name="price" value="" required/></td>
           <td class="col-1 ml-4"><button class="btn btn-sm btn-secondary create">Create</button></td>
         </tr>
 
+        <!--  Calculate button and Total price  -->
+        <tr class="row">
+          <td class="ml-auto mr-5"><button class="btn btn-success calculate">Calculate Price</button></td>
+        </tr>
+
+        <tr class="row">
+          <td><h1>Total Price:</h1><h1 class="cart-total d-block">$0.00</h1></td>
+        </tr>
       </tbody>
     </table>
   </body>
