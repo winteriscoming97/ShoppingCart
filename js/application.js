@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  calculateTotalPrice();
-  $('.create').click(createRow);
-
-  $(document).on('click', '.cancel', deleteRow);
-});
 
 //Delete Row on button click
 var deleteRow = function () {
@@ -26,16 +20,36 @@ var createRow = function () {
     }
 }
 //individual row prices
-var calculateTotalPrice = function () {
+var inputTimer;
+var getItemTotal = function () {
+  var calculateItemTotal = function () {
+    var price = parseFloat($(this).children('.price').text().split('').slice(1).join(''));
+
+    var quantity = $(this).children('.quantity').children('input').val();
+    var total = price * quantity;
+
+    $(this).children('.item-total').text('$' + String(total.toFixed(2)));
+    window.clearInterval(inputTimer);
+  }
+
   $('tbody tr').each(function (index, element) {
     if (index > 0) {
-      var price = parseFloat($(this).children('.price').text().split('').slice(1).join(''));
-
-      var quantity = $(this).children('.quantity').children('input').val();
-      var total = price * quantity;
-
-      $(this).children('.item-total').text('$' + String(total.toFixed(2)));
-
+      calculateItemTotal.call(element);
     }
   });
 }
+
+$(document).ready(function () {
+  getItemTotal();
+
+  $('.create').click(createRow);
+
+  $(document).on('click', '.cancel', deleteRow);
+
+  //quantity input debouncer
+  $(document).on('keyup', '.quantity > input', function () {
+    window.clearInterval(inputTimer);
+    inputTimer = window.setInterval(getItemTotal, 500);
+
+  });
+});
